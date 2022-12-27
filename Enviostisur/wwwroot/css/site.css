@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#columna1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 430px;
+    margin-top: 10px;
+}
+
+#columna2 {
+    margin-left: 480px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}

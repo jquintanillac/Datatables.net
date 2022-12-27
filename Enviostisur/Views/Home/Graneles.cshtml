@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewData["Title"] = "Graneles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>   
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+
+</head>
+<body>
+<div>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="text-center">CARGAS POR FUMIGAR</h3>
+        </div>
+        <div class="card-body">
+            <table id="tblgranel" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            RECALADA
+                        </th>
+                        <th>
+                            DOCUMENTO ORIGEN
+                        </th>
+                        <th>
+                            ITEM
+                        </th>
+                        <th>
+                            CLIENTE
+                        </th>
+                        <th>
+                            CARGA
+                        </th>
+                        <th>
+                            ALMACEN
+                        </th>
+                        <th>
+                            FECHA TARJA
+                        </th>
+                        <th>
+                            DIAS
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.Graneles) 
+                    {
+                        <tr>
+                            <td>
+                                @item.NU_RECA
+                            </td>
+                            <td>
+                                @item.NU_DOCU_ORIG
+                            </td>
+                            <td>
+                                @item.NU_SECU_ITEM
+                            </td>
+                            <td>
+                                @item.DE_CLIE
+                            </td>
+                            <td>
+                                @item.DE_CARG
+                            </td>
+                            <td>
+                                @item.DE_ALMA
+                            </td>
+                            <td>
+                                @item.FE_TARJ
+                            </td>
+                            <td>
+                                @item.DIAS
+                            </td>      
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+@section Scripts {
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('#tblgranel').DataTable({
+                "scrollX": true,
+                "responsive": true,
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                    "zeroRecords": "No se encontraron registros",
+                    "info": "Mostrar pagina _PAGE_ de _PAGES_",
+                    "infoEmpty": "No se encontraron registros",
+                    "infoFiltered": "(filtrado de _MAX_ registros totales)",
+                    "search": "Buscar:",
+                    "paginate": {
+                        "next": "siguiente",
+                        "previous": "Anterior"
+                    }                    
+                }
+        });
+    });
+</script>
+}
+
+
+

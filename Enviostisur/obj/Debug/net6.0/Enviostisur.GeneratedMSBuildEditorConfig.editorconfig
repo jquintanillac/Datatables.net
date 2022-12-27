@@ -1,0 +1,68 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Enviostisur
+build_property.RootNamespace = Enviostisur
+build_property.ProjectDir = D:\COD FUENTE TISUR\EnvioCorreos\Enviostisur\Enviostisur\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\COD FUENTE TISUR\EnvioCorreos\Enviostisur\Enviostisur
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Home/Graneles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHcmFuZWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Home/imprimirBalanza.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbXByaW1pckJhbGFuemEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Home/Mapalmacen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYXBhbG1hY2VuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Home/ReporteBalanza.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXBvcnRlQmFsYW56YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Home/SubirImagen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWJpckltYWdlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Home/TicketBalanza.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaWNrZXRCYWxhbnphLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/COD FUENTE TISUR/EnvioCorreos/Enviostisur/Enviostisur/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-g3o4vb63uj

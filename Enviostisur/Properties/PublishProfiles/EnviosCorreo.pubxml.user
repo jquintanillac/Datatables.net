@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\COD FUENTE TISUR\EnvioCorreos\Publicacion</_PublishTargetUrl>
+    <History>True|2022-12-26T22:38:35.5240510Z;True|2022-12-26T15:38:42.7452938-05:00;True|2022-12-26T11:25:49.9080377-05:00;True|2022-12-21T21:47:47.5133140-05:00;False|2022-10-17T14:30:06.0192448-05:00;False|2022-10-17T14:29:13.7895837-05:00;True|2022-04-20T09:17:00.9886901-05:00;True|2022-04-19T16:42:08.1795385-05:00;True|2022-02-11T20:48:42.1707104-05:00;True|2022-02-11T20:46:20.8819206-05:00;True|2022-02-11T20:22:57.7548976-05:00;True|2022-02-11T18:44:43.3279307-05:00;True|2022-02-11T18:42:21.2339132-05:00;True|2022-01-04T11:25:52.0658632-05:00;True|2022-01-04T10:45:58.3830022-05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "SubirImagen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SubirImagen</h1>
+
+<div class="container">
+    <div class="card">
+        <form asp-controller="Home" asp-action="Saveimg" enctype="multipart/form-data" method="post">
+            <div class="card-body">
+                <div class="row">
+                    <label>Descripcion: </label>
+                    <input class="border border-primary" type="text" placeholder="Descripcion" >                                                             
+                </div>
+                <br />
+                <br />
+                <div class="row">
+                    <input type="file" placeholder="subir imagen">                                           
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="submit">Grabar</button>
+            </div>
+        </form>
+    </div>
+</div>

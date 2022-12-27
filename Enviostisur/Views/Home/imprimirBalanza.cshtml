@@ -1,0 +1,166 @@
+﻿@model IEnumerable<Enviostisur.Models.MDBalanza>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>imprimirBalanza</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body class="body2">
+    @foreach (var item in Model.ToList())
+    {
+        @*@if(item.ID_REGI == "002" && item.TI_MOVI_INDI == "D")
+        {*@
+            <div id="columna1">
+                <label><b>TERMINAL INTERNACIONAL DEL SUR S.A. - AREQUIPA</b></label>
+                <br/>
+                <label><b>AREQUIPA</b></label>
+                <br />
+                <label><b>RUC:</b> @item.NU_RUCS</label>
+                <br/>
+                <label><b>TICKET DE SALIDA</b></label>
+                <br/>
+                <label><b>TICKET:</b> @item.NU_MOVI</label>
+                <br />
+                <label><b>BILL OF LADING:</b> @item.NU_DOCU_ORIG</label>
+                <br />
+                <label><b>ITEM BL:</b> @item.NU_SECU_ITEM</label>
+                <br />
+                <label><b>OPERACIÓN:</b> @item.DE_REGI</label>
+                <br />
+                <label><b>PLACA:</b> @item.DE_PLAC</label>
+                <br />
+                <label><b>CARRETA:</b> @item.DE_NUME_TRAC</label>
+                <br />
+                <label><b>CHOFER:</b> @item.NO_COND</label>
+                <br />
+                <label><b>DNI/C.E.:</b> @item.NU_DOCU_IDEN</label>
+                <br/>
+                <label><b>BREVETE:</b> @item.NU_BREV</label>
+                <br/>
+                <label><b>EMBALAJE:</b> @item.DE_CLAS_CARG</label>
+                <br/>
+                <label><b>PRODUCTO:</b> @item.DE_CARG</label>
+                <br/>
+                <label><b>PERMISO:</b> @item.NU_SALI</label>
+                <br/>
+                <label><b>BULTOS:</b> @item.NU_BULT</label>
+                <br/>
+                <label><b>NAVE:</b> @item.NO_NAVE</label>
+                <br/>
+                <label><b>CLIENTE:</b> @item.DE_CLIE</label>
+                <br/>
+                <label><b>RUC TRANSP:</b> @item.ID_TRAN</label>
+                <br/>
+                <label><b>Vehículo:</b> @item.DE_PLAC</label>
+                <br/>
+                <label><b>Carreta:</b> @item.DE_NUME_TRAC</label>
+                <br/>
+                <label><b>MIC:</b> @item.DE_MICS</label>
+                <br/>
+                <label><b>Ingreso:</b> @item.FE_ENTR @item.HO_ENTR</label>
+                <br/>
+                <label><b>Salida:</b> @item.FE_SALI @item.HO_SALI</label>
+                <br/>
+                <label><b>Bultos:</b> @item.NU_BULT</label>
+                <br/>
+                <label><b>1er Peso:</b> @item.CA_PES1</label>
+                <br/>
+                <label><b>2do Peso:</b> @item.CA_PES2</label>
+                <br/>
+                <label><b>P. NETO:</b> </label>
+                <br/>
+                <label><b>Nro. Ejes:</b> @item.NU_EJES</label>
+                <br/>                
+                <label><b>Balanza:</b> @item.DE_TIPO</label>
+                <br/>
+                <label><b>Usuario:</b> @item.DE_PERS_PES2</label>
+                <br/>
+                <label><b>MANEJE CON CUIDADO</b></label>
+                <br/>
+            </div>
+@*        }
+        else
+        {*@
+            <div id="columna2">
+                <label><b>TERMINAL INTERNACIONAL DEL SUR S.A. - AREQUIPA</b></label>
+                <br />
+                <label><b>AREQUIPA</b></label>
+                <br />
+                <label><b>RUC:</b> @item.NU_RUCS</label>
+                <br />
+                <label><b>TICKET DE SALIDA</b></label>
+                <br />
+                <label><b>TICKET:</b> @item.NU_MOVI</label>
+                <br />
+                <label><b>BILL OF LADING:</b> @item.NU_DOCU_ORIG</label>
+                <br />
+                <label><b>ITEM BL:</b> @item.NU_SECU_ITEM</label>
+                <br />
+                <label><b>OPERACIÓN:</b> @item.DE_REGI</label>
+                <br />
+                <label><b>PLACA:</b> @item.DE_PLAC</label>
+                <br />
+                <label><b>CARRETA:</b> @item.DE_NUME_TRAC</label>
+                <br />
+                <label><b>CHOFER:</b> @item.NO_COND</label>
+                <br />
+                <label><b>DNI/C.E.:</b> @item.NU_DOCU_IDEN</label>
+                <br />
+                <label><b>BREVETE:</b> @item.NU_BREV</label>
+                <br />
+                <label><b>EMBALAJE:</b> @item.DE_CLAS_CARG</label>
+                <br />
+                <label><b>PRODUCTO:</b> @item.DE_CARG</label>
+                <br />
+                <label><b>PERMISO:</b> @item.NU_SALI</label>
+                <br />
+                <label><b>BULTOS:</b> @item.NU_BULT</label>
+                <br />
+                <label><b>NAVE:</b> @item.NO_NAVE</label>
+                <br />
+                <label><b>CLIENTE:</b> @item.DE_CLIE</label>
+                <br />
+                <label><b>RUC TRANSP:</b> @item.ID_TRAN</label>
+                <br />
+                <label><b>Vehículo:</b> @item.DE_PLAC</label>
+                <br />
+                <label><b>Carreta:</b> @item.DE_NUME_TRAC</label>
+                <br />
+                <label><b>MIC:</b> @item.DE_MICS</label>
+                <br />
+                <label><b>Ingreso:</b> @item.FE_ENTR @item.HO_ENTR</label>
+                <br />
+                <label><b>Salida:</b> @item.FE_SALI @item.HO_SALI</label>
+                <br />
+                <label><b>Bultos:</b> @item.NU_BULT</label>
+                <br />
+                <label><b>1er Peso:</b> @item.CA_PES1</label>
+                <br />
+                <label><b>2do Peso:</b> @item.CA_PES2</label>
+                <br />
+                <label><b>P. NETO:</b> </label>
+                <br />
+                <label><b>Nro. Ejes:</b> @item.NU_EJES</label>
+                <br />
+                <label><b>Balanza:</b> @item.DE_TIPO</label>
+                <br />
+                <label><b>Usuario:</b> @item.DE_PERS_PES2</label>
+                <br />
+                <label><b>MANEJE CON CUIDADO</b></label>
+                <br />
+
+            </div>
+        @*}*@
+       
+    }
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
