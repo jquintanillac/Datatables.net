@@ -8,7 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Helpers\HelpersUpload.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="wwwroot\Rotativa\Windows\wkhtmltoimage.exe" />
+    <None Include="wwwroot\Rotativa\Windows\wkhtmltopdf.exe" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +28,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
     <PackageReference Include="Rotativa.AspNetCore" Version="1.2.0" />
     <PackageReference Include="System.CodeDom" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\antepuerto\" />
   </ItemGroup>
 
 </Project>

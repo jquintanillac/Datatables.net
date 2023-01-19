@@ -374,5 +374,56 @@ namespace Enviostisur.Data.Datasql
             }
         }
 
+        public async Task InsertImg(string path, string nombre, string almacen)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("[OfiOper].[TC_ANTPIMG_I01]", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@PE_imgruta", path);
+                cmd.Parameters.AddWithValue("@PE_nombre", nombre);
+                cmd.Parameters.AddWithValue("@PE_almacen", almacen);
+                await conexion.OpenAsync();
+                await cmd.ExecuteNonQueryAsync();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public List<MDImagen> ListImg()
+        {
+            try
+            {
+                List<MDImagen> Listitem = new List<MDImagen>();
+                SqlCommand cmd = new SqlCommand("[OfiOper].[TC_ANTPIMG_Q01]", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                conexion.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    MDImagen objimg = new MDImagen();
+                    objimg.id_img = Convert.ToInt32(rdr["id_img"]);
+                    objimg.img_ruta = rdr["img_ruta"].ToString();
+                    objimg.img_nombre = rdr["img_nombre"].ToString();
+                    objimg.img_almacen = rdr["img_almacen"].ToString();
+                    Listitem.Add(objimg);
+                }
+                conexion.Close();
+
+                return Listitem;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+
     }
 }

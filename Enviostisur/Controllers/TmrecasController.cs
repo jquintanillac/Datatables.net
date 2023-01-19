@@ -17,38 +17,15 @@ namespace Enviostisur.Controllers
             _Tmrecaservice = tmrecaservice;
         }
 
-    
-        // GET: api/<TmrecasController>
+
         [HttpGet]
         public List<MDTmreca> GetTmrecas()
         {
             var recaladas = _Tmrecaservice.GetTmrecas();
             return recaladas;
-        }
+        }    
+       
 
-        // GET api/<TmrecasController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<TmrecasController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<TmrecasController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<TmrecasController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+     
     }
 }

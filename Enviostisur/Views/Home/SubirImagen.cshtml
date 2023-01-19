@@ -3,26 +3,74 @@
     ViewData["Title"] = "SubirImagen";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>SubirImagen</h1>
-
-<div class="container">
+@if (TempData["success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Mensaje: </strong> @Html.Encode(TempData["success"])
+        <a href="#" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </a>
+    </div>
+}
+<div class="container-fluid">
     <div class="card">
-        <form asp-controller="Home" asp-action="Saveimg" enctype="multipart/form-data" method="post">
-            <div class="card-body">
-                <div class="row">
-                    <label>Descripcion: </label>
-                    <input class="border border-primary" type="text" placeholder="Descripcion" >                                                             
-                </div>
-                <br />
-                <br />
-                <div class="row">
-                    <input type="file" placeholder="subir imagen">                                           
+        <div class="card-header">
+            <h1>Subir Imagen Antepuerto</h1>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="card">
+                    <form asp-controller="Home" asp-action="Saveimg" enctype="multipart/form-data" method="post">
+                        <div class="card-body">
+                            <br />
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" name="img_nombre" placeholder="Ingrese nombre" />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-5">
+                                    <input type="text" class="form-control" name="almacen" placeholder="Ingrese codigo almacen" />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-10">
+                                    <input type="file" class="form-control" name="imagen" placeholder="subir imagen">
+                                </div>
+                             </div>                                                                                                            
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" type="submit">Grabar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="card-footer">
-                <button type="submit">Grabar</button>
-            </div>
-        </form>
+        </div>
+        <div class="card-footer">
+            <h1>Lista de imagenes Antepuerto</h1>
+            <br />
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach (var item in ViewBag.imagenes)
+                {
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="~/antepuerto/@item.img_ruta" style="max-height: 30vh; object-fit:contain;" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Nombre: @item.img_nombre</h4>
+                                <h4 class="card-title text-center">Almacen: @item.img_almacen</h4>
+                            </div>                 
+                            <div class="card-footer">
+                                <a class="btn btn-outline-info" asp-action="" asp-controller="" type="button" asp-route-id="@item.id_img">Codigo QR</a>
+                            </div>
+                        </div>                        
+
+                    </div>
+                }
+                </div>                        
+        </div>
     </div>
 </div>
+
+

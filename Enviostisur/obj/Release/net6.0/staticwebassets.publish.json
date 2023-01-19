@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Dk5/XvH4gj9dAXaaVli6wq4ZBsyzE+XtAa6rfMopPT8=",
+  "Hash": "j1AqmlaL9ywl960LrIC7YnG1rH6YV+VmOnm61h0XuzA=",
   "Source": "Enviostisur",
   "BasePath": "_content/Enviostisur",
   "Mode": "Default",
@@ -1137,6 +1137,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\twitter-bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Identity": "D:\\COD FUENTE TISUR\\EnvioCorreos\\Enviostisur\\Enviostisur\\wwwroot\\Rotativa\\Windows\\wkhtmltoimage.exe",
+      "SourceId": "Enviostisur",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COD FUENTE TISUR\\EnvioCorreos\\Enviostisur\\Enviostisur\\wwwroot\\",
+      "BasePath": "_content/Enviostisur",
+      "RelativePath": "Rotativa/Windows/wkhtmltoimage.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\Windows\\wkhtmltoimage.exe"
+    },
+    {
+      "Identity": "D:\\COD FUENTE TISUR\\EnvioCorreos\\Enviostisur\\Enviostisur\\wwwroot\\Rotativa\\Windows\\wkhtmltopdf.exe",
+      "SourceId": "Enviostisur",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\COD FUENTE TISUR\\EnvioCorreos\\Enviostisur\\Enviostisur\\wwwroot\\",
+      "BasePath": "_content/Enviostisur",
+      "RelativePath": "Rotativa/Windows/wkhtmltopdf.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\Windows\\wkhtmltopdf.exe"
     }
   ]
 }

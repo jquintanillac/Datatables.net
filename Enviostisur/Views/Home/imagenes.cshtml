@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>imagenes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Enviostisur.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center"><b>MAPA DE IMAGENES TISUR</b></h1>
+            </div>
+            <div class="card-body">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    @foreach (var item in ViewBag.imagenes)
+                    {
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="~/antepuerto/@item.img_ruta" style="max-height: 30vh; object-fit:contain;" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Nombre: @item.img_nombre</h4>
+                                    <h4 class="card-title text-center">Almacen: @item.img_almacen</h4>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="btn btn-outline-info" asp-action="" asp-controller="" type="button" asp-route-id="@item.id_img">Codigo QR</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>            
+        </div>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Tisur Pruebas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Datatables.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

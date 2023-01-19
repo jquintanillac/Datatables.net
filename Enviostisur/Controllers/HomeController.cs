@@ -2,6 +2,9 @@
 using Enviostisur.Data.Entities;
 using Enviostisur.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore;
+using System.IO;
 using System.Diagnostics;
 using System.Net.Mail;
 using System.Globalization;
@@ -10,23 +13,53 @@ using System.Globalization;
 //using MimeKit;
 using static Enviostisur.Models.MDWhatsapp;
 using Rotativa.AspNetCore;
+using Enviostisur;
+using Enviostisur.Helpers;
 
 namespace Enviostisur.Controllers
-{
+{    
     public class HomeController : Controller
     {
         private IConfiguration _configuration;
         private readonly ILogger<HomeController> _logger;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        SPOperaciones _operaciones;        
-        public HomeController(IConfiguration configuration, ILogger<HomeController> logger, IWebHostEnvironment webHostEnvironment)
+        SPOperaciones _operaciones;
+        HelpersUpload _helpersUpload;
+        public HomeController(IConfiguration configuration, ILogger<HomeController> logger, IWebHostEnvironment webHostEnvironment, HelpersUpload helpersUpload)
         {
             _logger = logger; 
             _operaciones = new SPOperaciones();
             _configuration = configuration;
             _webHostEnvironment = webHostEnvironment;
+            _helpersUpload = helpersUpload;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Saveimg(IFormFile imagen, string img_nombre, string almacen)
+        {
+            try
+            {
+                string nombreImagen = imagen.FileName;
+                string path = "";
+                string path2 = "";
+                string uniquefilename = "";
+                string filename1 = "";
+                uniquefilename = Guid.NewGuid().ToString() + "_" + nombreImagen.ToLower();
+                filename1 = $"{_webHostEnvironment.WebRootPath}\\antepuerto\\{uniquefilename}";
+                path = Path.Combine(_webHostEnvironment.WebRootPath, filename1);     
+                path = await _helpersUpload.UploadFilesAsync(imagen, path);
+                path2 = uniquefilename;
+                await _operaciones.InsertImg(path2, img_nombre, almacen);
+                TempData["success"] = "Las imagenes se cargaron correctamente.";
+                return RedirectToAction("SubirImagen", "Home");
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
         public IActionResult Index()
         {            
             return View();
@@ -284,13 +317,16 @@ namespace Enviostisur.Controllers
             return View();
         }
         public IActionResult SubirImagen()
-        {
+        {           
+            ViewBag.imagenes = _operaciones.ListImg();
             return View();
         }
-        public IActionResult Saveimg()
+        public IActionResult imagenes()
         {
+            ViewBag.imagenes = _operaciones.ListImg();
             return View();
         }
+
         public async Task<IActionResult> ReporteBalanza()
         {           
             return View();
@@ -326,7 +362,7 @@ namespace Enviostisur.Controllers
             //return View(imprimir);
             return new ViewAsPdf("imprimirBalanza", imprimir)
             {
-                PageSize = Rotativa.AspNetCore.Options.Size.A4
+                PageSize = Rotativa.AspNetCore.Options.Size.A6
             };
         }
 

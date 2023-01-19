@@ -164,21 +164,14 @@
                 swal('Mensaje de advertencia', 'Complete la busqueda de documento origen', 'error');
             }
         });
-
-        //$("#imprimir").click(function () {
-        //    var recal = $('#inpreca').val();
-        //    var iddocu = $('#bl').val();
-        //    var item = $('#items').val();
-        //    var Fecini = $('#fecini').val();
-        //    var Fecfin = $('#fecfin').val();
-        //    btnimprimir(Fecini, Fecfin, recal, iddocu, item);
-        //});
-            
+           
         function btnrecalada(){
+            var url = $(location).attr('origin') + "/TicketBalanza/api/Tmrecas";
             $('#tblreca').DataTable({
                 "destroy": true,
                 "ajax": {
-                    "url": "/api/Tmrecas",
+                    "type": "GET",
+                    "url": url,
                     "dataSrc": ""
                 },
                 "pageLength": 15,
@@ -209,10 +202,12 @@
         }
 
         function btndocu(nu_reca){
+            var url = $(location).attr('origin') + "/TicketBalanza/api/Tcdocu_orig";
             $('#tbldocu').DataTable({
                 "destroy": true,
                 "ajax": {
-                    "url": "/api/Tcdocu_orig",
+                    "type": "GET",
+                    "url": url,
                     "data": { "nu_reca": nu_reca },
                     "dataSrc": ""
                 },
@@ -246,10 +241,12 @@
         }
 
         function btnitem(iddocu_orig) {
+            var url = $(location).attr('origin') + "/TicketBalanza/api/Tddocu_orig";
             $('#tblitem').DataTable({
                 "destroy": true,
                 "ajax": {
-                    "url": "/api/Tddocu_orig",
+                    "type": "GET",
+                    "url": url,
                     "data": { "ID_DOCU_ORIG": iddocu_orig },
                     "dataSrc": ""
                 },
@@ -284,18 +281,6 @@
 
         }
 
-        //function btnimprimir(Fecini, Fecfin, recal, iddocu, item) {
-        //    $.ajax({
-        //        url: '@Url.Action("imprimirBalanza", "Home")',
-        //        data: { "Fecini": Fecini, "Fecfin": Fecfin, "recal": recal, "iddocu": iddocu, "item": item},
-        //        type: "POST"
-        //        //success: function (result) {
-        //        //    swal('Mensaje de confirmacion', 'Registro eliminado', 'success');
-        //        //    ReloadGrid();
-        //        //}
-        //    });
-        //}
-
         function EscogerReca(oReca){
             $("#inpreca").val(oReca.NU_RECA);
             $("#recalada").modal('hide');
@@ -313,13 +298,7 @@
             $("#item").modal('hide');
             $('.modal-backdrop').remove();
         }
-
-       
-
-        function Reload() {
-            $("#tblfactu").DataTable().clear();
-            $("#tblfactu").DataTable().ajax.reload();
-        }
+    
 </script>
 }
     
